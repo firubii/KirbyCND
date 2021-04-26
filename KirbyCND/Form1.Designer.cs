@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -35,8 +36,14 @@
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.entryList = new System.Windows.Forms.TreeView();
+            this.delEntry = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addEntry = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.addEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.delEntry.SuspendLayout();
+            this.addEntry.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -96,10 +103,38 @@
             // 
             // entryList
             // 
+            this.entryList.LabelEdit = true;
             this.entryList.Location = new System.Drawing.Point(7, 20);
             this.entryList.Name = "entryList";
             this.entryList.Size = new System.Drawing.Size(397, 384);
             this.entryList.TabIndex = 0;
+            this.entryList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.entryList_MouseDoubleClick);
+            // 
+            // delEntry
+            // 
+            this.delEntry.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteEntryToolStripMenuItem});
+            this.delEntry.Name = "delEntry";
+            this.delEntry.Size = new System.Drawing.Size(138, 26);
+            // 
+            // deleteEntryToolStripMenuItem
+            // 
+            this.deleteEntryToolStripMenuItem.Name = "deleteEntryToolStripMenuItem";
+            this.deleteEntryToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.deleteEntryToolStripMenuItem.Text = "Delete Entry";
+            // 
+            // addEntry
+            // 
+            this.addEntry.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addEntryToolStripMenuItem});
+            this.addEntry.Name = "addEntry";
+            this.addEntry.Size = new System.Drawing.Size(127, 26);
+            // 
+            // addEntryToolStripMenuItem
+            // 
+            this.addEntryToolStripMenuItem.Name = "addEntryToolStripMenuItem";
+            this.addEntryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addEntryToolStripMenuItem.Text = "Add Entry";
             // 
             // Form1
             // 
@@ -116,6 +151,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.delEntry.ResumeLayout(false);
+            this.addEntry.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,6 +167,10 @@
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TreeView entryList;
+        private System.Windows.Forms.ContextMenuStrip delEntry;
+        private System.Windows.Forms.ToolStripMenuItem deleteEntryToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip addEntry;
+        private System.Windows.Forms.ToolStripMenuItem addEntryToolStripMenuItem;
     }
 }
 
